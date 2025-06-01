@@ -1,0 +1,14 @@
+{
+    "change_filament_gcode": "; set temp\nM104 S[nozzle_temperature_range_high]\n; move up\nG1 Z{max_layer_z + 10} F1200\n; move to the right and cut\nG1 X260 F20000\nG1 X278 F400\nG1 X281 E-5 F80\nG1 X260 F6000\nM400\n; move to the left\nG1 X-35 F20000\nG1 X-48 F600\nM400\n; unload\nG1 E-100 F1000\nM400\n; wait for user\nM400 U1\n; set temp\nM109 S[nozzle_temperature_range_high]\n; load\nG1 E200 F500\nM400\n; poop\nM400\nM106 P1 S178\nM400 S3\nG1 X-38.2 F18000\nG1 X-48.2 F3000\nG1 X-38.2 F18000\nG1 X-48.2 F3000\nG1 X-38.2 F18000\nG1 X-48.2 F3000\nM400\nM106 P1 S0; set temp\nM104 S[nozzle_temperature_range_high]\n; move up\nG1 Z{max_layer_z + 10} F1200\n; move to the right and cut\nG1 X260 F20000\nG1 X278 F400\nG1 X281 E-5 F80\nG1 X260 F6000\nM400\n; move to the left\nG1 X-35 F20000\nG1 X-48 F600\nM400\n; unload\nG1 E-100 F1000\nM400\n; wait for user\nM400 U1\n; set temp\nM109 S[nozzle_temperature_range_high]\n; load\nG1 E200 F500\nM400\n; poop\nM400\nM106 P1 S178\nM400 S3\nG1 X-38.2 F18000\nG1 X-48.2 F3000\nG1 X-38.2 F18000\nG1 X-48.2 F3000\nG1 X-38.2 F18000\nG1 X-48.2 F3000\nM400\nM106 P1 S0",
+    "from": "User",
+    "inherits": "Bambu Lab A1 0.4 nozzle",
+    "name": "Bambu Lab A1 0.4 nozzle - filament",
+    "printer_extruder_id": [
+        "1"
+    ],
+    "printer_extruder_variant": [
+        "Direct Drive Standard"
+    ],
+    "printer_settings_id": "Bambu Lab A1 0.4 nozzle - filament",
+    "version": "2.0.0.89"
+}
